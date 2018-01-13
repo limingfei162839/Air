@@ -29,18 +29,16 @@
       </div>
     </div>
     <!-- content -->
-    <div class="content">
-      
-      <router-view/>
-    </div>
+    <div class="content"><router-view/></div>
     <!-- footer -->
     <div class="clear"></div>
     <div class="footer">
-       version 1.0
+       <!--version 1.0-->
+       <router-link to="/MIndex">后台管理</router-link>
     </div>
     <div class="public_window_top">
         <i class = "fa fa-long-arrow-up hover" @click="TopWindow();"></i>
-        <div class="hover">登录</div>
+        <div class="hover" @click = "SignIn();">登录</div>
         <i class = "fa fa-long-arrow-down hover" @click="BottomWindow();"></i>
       </div>
   </div>
@@ -55,11 +53,15 @@ import $ from 'jquery/dist/jquery.min.js'
       }
     },
     methods: {
-      TopWindow:function(){
-        $('html,body').animate({scrollTop:0},100);//回到顶端
+      TopWindow(){//回到顶端
+        $('html,body').animate({scrollTop:0},100);
       },
-      BottomWindow:function(){
-        $('html,body').animate({scrollTop:$('html,body')[0].scrollHeight},100);//回到底端
+      BottomWindow(){//回到底端
+        $('html,body').animate({scrollTop:$('html,body')[0].scrollHeight},100);
+      },
+      SignIn(){//登录
+        alert('222');
+       
       }
     }
   }
