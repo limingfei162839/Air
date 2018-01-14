@@ -23,7 +23,7 @@
       </div>
       <div class="location" style="position: absolute;
     right: 20px;">
-        <el-input placeholder="请输入内容" v-model="input23">
+        <el-input placeholder="请输入内容">
           <i slot="prefix" class="el-input__icon el-icon-search"></i>
         </el-input>
       </div>
