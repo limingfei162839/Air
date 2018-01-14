@@ -11,6 +11,7 @@ import Message from '@/components/view/message' //给我留言
 
 import MIndex from '@/components/modules/m_index' //后台管理首页
 import MExchange from '@/components/modules/m_exchange' //后台技术类添加
+import MUser from '@/components/modules/m_user' //后台用户管理
 Vue.use(Router);
 Vue.use(ElementUI);
 Vue.use(Fontawesome);
@@ -50,6 +51,10 @@ export default new Router({
                     {
                         path: '/',
                         component: MExchange
+                    },
+                    {
+                        path: '/MUser',
+                        component: MUser
                     },
                     {
                         path: '/MExchange',

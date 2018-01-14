@@ -20,7 +20,7 @@
                 <el-menu-item index="1" style="background: #1b1b1b !important">
                   <i class="el-icon-menu"></i>
                   <span slot="title">
-                    <router-link to="/MExchange">用户管理</router-link>
+                    <router-link to="/MUser">用户管理</router-link>
                   </span>
                 </el-menu-item>
                 <el-menu-item index="2" style="background: #1b1b1b !important">

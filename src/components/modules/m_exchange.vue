@@ -97,5 +97,5 @@ export default {
 .el-form-item__label {
     text-align: left !important;
 }
-.btn{ margin-left: 30%;width: 400px;}
+.btn{ margin-left: 30%;width: 500px;}
 </style>
