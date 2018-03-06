@@ -1,5 +1,5 @@
 ﻿/**
- * Created by swh 2016年9月7日11:32:07
+ * Created by lmf 2018/03/06
  */
 
 var Sequelize = require('sequelize');
