@@ -4,6 +4,8 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import Fontawesome from 'font-awesome/css/font-awesome.min.css'
 
+import Login from '@/components/public/login' //登录
+
 import Container from '@/components/public/container' //架构容器
 import Banner from '@/components/view/banner' //首页
 import Exchange from '@/components/view/exchange' //技术杂谈
@@ -17,49 +19,54 @@ Vue.use(ElementUI);
 Vue.use(Fontawesome);
 export default new Router({
     mode: 'history',
-    routes: [
+    routes: [{
+            path: '/',
+            name: 'Login',
+            component: Login
+        },
         {
-        path: '/',
-        name: 'Container',
-        component: Container,
-        children: [{
-                path: '/',
-                redirect: 'Banner'
-            },
-            {
-                path: '/Banner',
-                name: 'Banner',
-                component: Banner
-            },
-            {
-                path: '/Exchange',
-                name: 'Exchange',
-                component: Exchange
-            },
-            {
-                path: '/Message',
-                name: 'Message',
-                component: Message
-            },
-            
-        ],
-        },{
-                path: '/MIndex',
-                name: 'MIndex',
-                component: MIndex,
-                children:[
-                    {
-                        path: '/',
-                        component: MExchange
-                    },
-                    {
-                        path: '/MUser',
-                        component: MUser
-                    },
-                    {
-                        path: '/MExchange',
-                        component: MExchange
-                    }
-                ]
-            },]
+            path: '/Container',
+            name: 'Container',
+            component: Container,
+            children: [{
+                    path: '/',
+                    redirect: 'Banner'
+                },
+                {
+                    path: '/Banner',
+                    name: 'Banner',
+                    component: Banner
+                },
+                {
+                    path: '/Exchange',
+                    name: 'Exchange',
+                    component: Exchange
+                },
+                {
+                    path: '/Message',
+                    name: 'Message',
+                    component: Message
+                },
+
+            ],
+        },
+        {
+            path: '/MIndex',
+            name: 'MIndex',
+            component: MIndex,
+            children: [{
+                    path: '/',
+                    component: MExchange
+                },
+                {
+                    path: '/MUser',
+                    component: MUser
+                },
+                {
+                    path: '/MExchange',
+                    component: MExchange
+                }
+            ]
+        },
+    ]
 })

@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "file:node_modules/body-parser",
+    "cookies": "^0.7.1",
     "element-ui": "^2.0.11",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
