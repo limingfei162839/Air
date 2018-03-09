@@ -25,11 +25,8 @@
 import '../../assets/css/normalize.css'
 import '../../assets/css/demo.css'
 import '../../assets/css/component.css'
-// import '../../assets/js/TweenLite.min.js'
-// import '../../assets/js/EasePack.min.js'
-// import '../../assets/js/rAF.js'
-// import '../../assets/js/demo-1.js'
 import $ from 'jquery/dist/jquery.min.js'
+import axios from 'axios'
   export default {
     name: 'login',
     data() {
@@ -41,7 +38,21 @@ import $ from 'jquery/dist/jquery.min.js'
        SignIn(){
 				 var username = $('#username').val();
 				 var password = $('#password').val();
-				 console.log(username,password);
+				 if(username == '' || password == ''){
+					 this.$message.error('！用户名或密码不能为空');
+				 }else{
+            axios.get('/api/Login/signUser',{
+								params:{
+									username:username,
+									password:password
+								}
+			    	}).then(function (ret) {
+							   if(ret.data.code == 0){
+										console.log(ret,'===登录成功');
+								 }
+  					}).catch(function (error) {
+  			   	});
+				 }
 			 }
     }
   }

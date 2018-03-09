@@ -1,5 +1,5 @@
 ﻿/**
- * Create by limingfei on 2017/5/20
+ * Create by lmf on 2017/5/20
  *应用程序入口文件
  */
 //加载express模块
@@ -22,8 +22,8 @@ app.use(function(req, res, next) {
     next();
 });
 // ---------end----------JSON處理-----
-// app.use(express.static(path.join(__dirname, 'src')));
-app.use('/', require('./router/login'));
+app.use(express.static(path.join(__dirname, 'src')));
+app.use('/Login', require('./router/login'));
 
 var port = normalizePort(process.env.PORT || config.app.webPort);
 app.set('port', port);

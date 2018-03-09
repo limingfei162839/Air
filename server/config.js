@@ -1,6 +1,6 @@
 module.exports = {
     app: {
-        webPort: "8081"
+        webPort: "3001"
     },
     mysql: {
         host: 'localhost',
