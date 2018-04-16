@@ -23,7 +23,9 @@ app.use(function(req, res, next) {
 });
 // ---------end----------JSON處理-----
 app.use(express.static(path.join(__dirname, 'src')));
+// app.use('/Login', require('./router/login'));//后端路由入口
 app.use('/Login', require('./router/login'));
+app.use('/M_user', require('./router/m_user/m_user'));
 
 var port = normalizePort(process.env.PORT || config.app.webPort);
 app.set('port', port);

@@ -51,6 +51,7 @@ import axios from 'axios'
 										console.log(ret,'===登录成功');
 								 }
   					}).catch(function (error) {
+							console.log(error,'登录失败');
   			   	});
 				 }
 			 }
