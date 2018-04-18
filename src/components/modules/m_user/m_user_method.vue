@@ -41,7 +41,7 @@ import muser from './m_user.vue'
     name:'m_user_method',
     data() {
       var self = this;
-      return {
+      return { 
         ruleForm: {
           // ID: '',
           name: '',

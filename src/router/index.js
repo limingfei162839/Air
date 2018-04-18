@@ -13,6 +13,7 @@ import Message from '@/components/view/message' //给我留言
 
 import MIndex from '@/components/modules/m_index' //后台管理首页
 import MUser from '@/components/modules/m_user/m_user' //后台用户管理
+import MArticle from '@/components/modules/m_article/m_article' //后台用户管理
 
 Vue.use(Router);
 Vue.use(ElementUI);
@@ -61,6 +62,10 @@ export default new Router({
                 {
                     path: '/MUser',
                     component: MUser
+                },
+                {
+                    path: '/MArticle',
+                    component: MArticle
                 }
             ]
         },
